@@ -6,7 +6,7 @@ inline NSString *StringForPreferenceKey(NSString *key) {
     return prefs[key];
 }
 
-@class PHBottomBarButton;
+
 
 
 // source code from creaturesurvive CSColorPicker
@@ -20,10 +20,10 @@ inline NSString *StringForPreferenceKey(NSString *key) {
   color = [UIColor cscp_colorFromHexString:StringForPreferenceKey(@"k_myTweakBackgroundColor")];
 
   NSString *hex = [UIColor cscp_hexStringFromColor:color];
-     NSLog(hex);
+     NSLog(@"%@", hex);
 
-     NSString *hex = [UIColor cscp_hexStringFromColor:color alpha:YES];
-   NSLog(hex);
+     hex = ...
+NSLog(@"%@", hex);
 
    // we can also validate our hex string if we need
    BOOL valid = [UIColor cscp_isValidHexString:@"FFFFFF"];
@@ -35,7 +35,7 @@ inline NSString *StringForPreferenceKey(NSString *key) {
 NSArray<id> *gradientColors = [StringForPreferenceKey(@"k_myTweakBackgroundGradient") cscp_gradientStringCGColors];
 
 CAGradientLayer *gradient = [CAGradientLayer layer];
-  gradient.frame = self.view.bounds;
+  gradient.frame = self.bounds;
 
 // left to right gradient
   gradient.startPoint = CGPointMake(0, 0.5);
@@ -45,10 +45,8 @@ CAGradientLayer *gradient = [CAGradientLayer layer];
 gradient.colors = gradientColors;
 
 // add the gradient to the view
-[self.view addSublayer:gradient];
+[self addSublayer:gradient];
 
-// if upi need an array of UIColors instead of CGColors use:
-NSArray<UIColor *> ui_colors = [StringForPreferenceKey(@"k_myTweakBackgroundGradient") cscp_gradientStringColors];
 
 }
 
