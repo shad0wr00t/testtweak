@@ -1,3 +1,4 @@
+#import <UIKit/UIKit.h>
 #include <CSColorPicker/CSColorPicker.h>
 #define PLIST_PATH @"/User/Library/Preferences/com.shad0wr00t.testtweak.plist"
 
@@ -7,7 +8,8 @@ inline NSString *StringForPreferenceKey(NSString *key) {
 }
 
 
-
+@interface PHBottomBarButton : UIButton
+@end
 
 // source code from creaturesurvive CSColorPicker
 
@@ -22,11 +24,10 @@ inline NSString *StringForPreferenceKey(NSString *key) {
   NSString *hex = [UIColor cscp_hexStringFromColor:color];
      NSLog(@"%@", hex);
 
-     hex = ...
+     hex = (@"FFFFFF");
 NSLog(@"%@", hex);
 
-   // we can also validate our hex string if we need
-   BOOL valid = [UIColor cscp_isValidHexString:@"FFFFFF"];
+
 }
 
 
@@ -46,6 +47,9 @@ gradient.colors = gradientColors;
 
 // add the gradient to the view
 [self addSublayer:gradient];
+
+// add the gradient to the view
+[self.layer addSublayer:gradient];
 
 
 }
