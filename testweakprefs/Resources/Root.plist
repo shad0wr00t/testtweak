@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>testweakprefs First Page</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.shad0wr00t.testtweakprefs</string>
+			<key>key</key>
+			<string>AwesomeSwitch1</string>
+			<key>label</key>
+			<string>Awesome Switch 1</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>testweakprefs</string>
+</dict>
+</plist>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+        <key>title</key>
+		<string>MyAwesomeTweak</string>
+
+		<key>items</key>
+		<array>
+
+			<!-- color cell specifier -->
+			<dict>
+				<key>PostNotification</key>
+				<string>com.shad0wr00t.testtweak.prefsChanged</string>
+				<key>cell</key>
+				<string>PSLinkCell</string>
+				<key>cellClass</key>
+				<string>CSColorDisplayCell</string>
+				<key>defaults</key>
+				<string>com.shad0wr00t.testtweak</string>
+				<key>defaultsPath</key>
+				<string>/Library/PreferenceBundles/testtweakprefs.bundle</string>
+				<key>key</key>
+				<string>k_myTweakBackgroundColor</string>
+				<key>label</key>
+				<string>My Awesome Background Color</string>
+                <key>fallback</key>
+                <string>FFFFFF</string>
+				<key>alpha</key>
+				<false/>
+			</dict>
+
+			<!-- gradient cell specifier -->
+			<dict>
+				<key>PostNotification</key>
+				<string>com.shad0wr00t.testtweak.prefsChanged</string>
+				<key>cell</key>
+				<string>PSLinkCell</string>
+				<key>cellClass</key>
+				<string>CSGradientDisplayCell</string>
+				<key>defaults</key>
+				<string>com.shad0wr00t.testtweak</string>
+				<key>defaultsPath</key>
+				<string>/Library/PreferenceBundles/testtweakprefs.bundle</string>
+				<key>key</key>
+				<string>k_myTweakBackgroundGradient</string>
+				<key>label</key>
+				<string>My Awesome Background Gradient</string>
+                <key>fallback</key>
+                <string>FFFFFF,000000</string>
+				<key>alpha</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+</plist>
