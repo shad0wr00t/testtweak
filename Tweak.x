@@ -46,7 +46,7 @@ CAGradientLayer *gradient = [CAGradientLayer layer];
 gradient.colors = gradientColors;
 
 // add the gradient to the view
-[self addSublayer:gradient];
+[self.layer addSublayer:gradient];
 
 // add the gradient to the view
 [self.layer addSublayer:gradient];
